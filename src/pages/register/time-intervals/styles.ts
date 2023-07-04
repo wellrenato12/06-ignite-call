@@ -18,6 +18,10 @@ export const IntervalItem = styled('div', {
   justifyContent: 'space-between',
   padding: '$3 $4',
 
+  '@media(max-width: 450px)': {
+    padding: '$2 $3',
+  },
+
   '& + &': {
     borderTop: '1px solid $gray600',
   },
@@ -27,12 +31,22 @@ export const IntervalDay = styled('div', {
   display: 'flex',
   alignItems: 'center',
   gap: '$3',
+
+  [`> ${Text}`]: {
+    '@media(max-width: 450px)': {
+      fontSize: '$sm',
+    },
+  },
 })
 
 export const IntervalInputs = styled('div', {
   display: 'flex',
   alignItems: 'center',
   gap: '$2',
+
+  '@media(max-width: 450px)': {
+    gap: '$1',
+  },
 
   'input::-webkit-calendar-picker-indicator': {
     filter: 'invert(100%) brightness(40%)',

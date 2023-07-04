@@ -7,14 +7,29 @@ export const Container = styled('div', {
   display: 'flex',
   alignItems: 'center',
   gap: '$20',
+
+  '@media(max-width: 1465px)': {
+    flexDirection: 'column',
+    gap: '$10',
+  },
+
+  '@media(max-width: 800px)': {
+    textAlign: 'center',
+  },
 })
 
 export const Hero = styled('div', {
   maxWidth: 480,
   padding: '0 $10',
+  '@media(max-width: 800px)': {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '$4',
+    margin: 'auto',
+  },
 
   [`> ${Heading}`]: {
-    '@media(max-width: 600px)': {
+    '@media(max-width: 800px)': {
       fontSize: '$6xl',
     },
   },
@@ -22,14 +37,16 @@ export const Hero = styled('div', {
   [`> ${Text}`]: {
     marginTop: '$2',
     color: '$gray200',
+    '@media(max-width: 800px)': {
+      fontSize: '$2',
+    },
   },
 })
 
 export const Preview = styled('div', {
   paddingRight: '$8',
-  overflow: 'hidden',
 
-  '@media(max-width: 600px)': {
+  '@media(max-width: 800px)': {
     display: 'none',
   },
 })
